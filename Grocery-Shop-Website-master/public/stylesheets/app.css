@@ -1,0 +1,1330 @@
+/* common styling */
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* styling navbar */
+
+#logo{
+    height: 52px;
+}
+
+nav{
+    font-size: 1.1rem;
+    background-color: rgb(57, 84, 112);
+    font-weight: 700;
+    opacity: 0.9;
+    width: 100%;
+}
+
+.navbar-brand{
+    color: #fff !important;
+    font-size: 1.6rem !important;
+    margin: none;
+    padding: 0 !important;
+}
+
+.fa-bars{
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.n-link{
+    display: inline-block;
+    margin: none;
+    color: #ece2e2;
+    padding: 9px 1px;
+    margin: auto 2px;
+    transition: font-size, background-color 0.1s ease-in-out;
+    width: 8rem;
+    text-align: center;
+}
+
+.n-link:hover, .active{
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(69, 102, 133);
+    border-radius: 7px;
+}
+
+.n-link:active{
+    background-color: rgb(104, 136, 165);
+}
+
+.n-list{
+    margin-right: 1rem;
+}
+
+nav ul li img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+nav ul li .avatar{
+    color: #fff;
+    font-size: 1.1rem;
+    margin: auto 2px; 
+    cursor: pointer;
+    padding: 3px 10px;
+}
+
+nav ul li .avatar:hover{
+    background-color: rgb(69, 102, 133);
+    border-radius: 7px;
+    font-size: 1.15rem;
+}
+
+/* styling alerts */
+
+.alert{
+    top: 90px;
+    width: 100%;
+    z-index: 2;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+/* styling the slideshow */
+
+.img{
+    height: 100vh;
+    width: 100vw;
+}
+
+#carouselExampleFade{
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.carousel-inner{
+    height: 100%;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.carousel-control-next, .carousel-control-prev{
+    z-index: 0 !important;
+}
+
+
+/* styling slideshow content */
+
+#content{
+    color: #fff;;
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 11%;
+}
+
+#content h1{
+    font-family: 'Merriweather', serif;
+    font-size: 6rem;
+    font-weight: 500;
+    margin-bottom: 1.3rem;
+    text-shadow: 3px 3px rgba(0,0,0, 0.5);
+}
+
+#content p{
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-shadow: 2px 2px rgba(0,0,0,0.6);
+    margin-bottom: 40px;
+    text-decoration: underline;
+    color: rgb(237, 238, 230);
+}
+
+/* styling product info section */
+
+#know_more{
+    background-color: #d3e2df69;
+}
+
+#know_more .row{
+    margin: 0 !important;
+}
+
+#know_more .row .c{
+    height: 450px;
+    margin: 0;
+    padding: 0 !important;
+}
+
+#know_more .pic{
+    height: 85%;
+    width: 75%;
+    margin: 10px auto;
+    border-radius: 3%;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
+}
+
+#know_more .pic1{
+    background: url("/images/info-section-pics/rice.jpg") no-repeat center center/cover;
+}
+
+#know_more .pic2{
+    background: url("/images/info-section-pics/sugar.jpg") no-repeat center center/cover;
+}
+
+#know_more .pic3{
+    background: url("/images/info-section-pics/jaggery.jpg") no-repeat center center/cover;
+}
+
+#know_more .pic4{
+    background: url("/images/info-section-pics/pulses.jpg") no-repeat center center/cover;
+}
+
+#know_more .pic5{
+    background: url("/images/info-section-pics/channa.jpg") no-repeat center center/cover;
+}
+
+#know_more .pic6{
+    background: url("/images/info-section-pics/newItems.jpg") no-repeat center center/cover;
+}
+
+#know_more .info{
+    text-align: center;
+    width: 70%;
+    margin: 35px auto;
+    padding: 30px 40px;
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.2);
+}
+#know_more .info h2{
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+    color: steelblue;
+}
+
+#know_more .info .btn{
+    font-weight: 700;
+}
+
+#know_more .head-info h2{
+    font-size: 3.5rem;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+    color: #237dac;
+    text-shadow: 3px 3px 5px rgba(0,0,0, 0.2);
+    width: 90%;
+    border-bottom: 2px solid rgba(0,0,0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#know_more .info .product_list{
+    list-style: none;
+    padding: 0 0 0 5px !important;
+}
+
+#know_more .info .product_list li{
+    background-color: rgba(0,0,0,0.1);
+    margin: 5px;
+    padding: 5px 10px;
+    font-weight: 500;
+    text-align: left;
+}
+
+#know_more .info .product_list li span{
+    float: right;
+}
+
+#know_more .info .product_list li a{
+    text-decoration: none;
+    color: #454649;
+    font-size: 1.2rem;
+}
+
+#know_more .info .product_list li:hover a{
+    color: #13202c;
+}
+
+/* styling comment section */
+
+#comments{
+    background-color: #f9f6fa;
+}
+
+#comments .comment-container > .row{
+    width: 100%;
+}
+
+#comments img{
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#comments .content{
+    padding: 7px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.09);
+    margin: 5px 0 5px 20px;
+    border-radius: 7px;
+}
+
+#comments .content h5{
+    color: rgb(83, 42, 12);
+    margin-top: 5px;
+    font-size: 1.1rem !important;
+}
+
+#comments .content blockquote{
+    color: rgb(16, 6, 51);
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#comments .comment-container{
+    padding: 10px;
+    padding-bottom: 25px;
+}
+
+#star-rating{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.fa-star{
+    color: rgb(161, 153, 153);
+}
+
+.check{
+    color: orange;
+}
+
+#comments .head-info h2{
+    font-size: 3.5rem;
+    margin: auto;
+    padding: 1rem 0;
+    text-align: center;
+    color: #237dac;
+    text-shadow: 3px 3px 5px rgba(0,0,0, 0.2);
+    width: 96%;
+    border-bottom: 2px solid rgba(0,0,0, 0.1);
+    margin-bottom: 1rem;
+}
+
+#comments .comment-container .add{
+    margin: 5px 20px 15px 25px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+    color: steelblue;
+    transition: all 0.2s ease-in-out;
+}
+
+#comments .comment-container .add:hover{
+    color: rgb(40, 81, 114);
+}
+
+#comments .comment-container .update{
+    height: 25px;
+    padding: 2px !important;
+    margin-left: 15px;
+}
+
+#comments .comment-container .delete{
+    height: 25px;
+    padding: 2px !important;
+    margin-left: 5px;
+}
+
+#comments .comment-container form{
+    display: inline;
+}
+
+/* styling feature section */
+
+#feature .row{
+    margin: 0 !important;
+}
+
+#feature .c{
+    height: 270px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#feature .f{
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#feature .feature-info{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding-top: 3rem;
+}
+
+#feature .feature-info h3{
+    font-weight: 700;
+    padding-bottom: 0.7rem;
+}
+
+#feature .feature-info p{
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+#feature i{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+#feature .feature1{
+    background-color: rgba(231, 236, 236, 0.986);
+}
+
+#feature .feature2{
+    background-color: rgba(209, 203, 188, 0.8);
+}
+
+#feature .feature3{
+    background-color: rgba(231, 236, 236, 0.986);
+}
+
+/* styling footer section */
+
+footer{
+    background-color: rgba(0, 0, 0, 0.705);
+    margin: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social {
+    padding: 3px;
+    text-align: center;
+}
+  
+footer .social-icon {
+    text-align: center;
+    width: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    font-size: 1.1rem;
+    margin: 5px 7px;
+}
+
+footer .social .fa-facebook-f {
+    background-color: #3b5999;
+}
+
+footer .social .fa-twitter {
+    background-color: #1da1f3;
+}
+
+footer .social .fa-instagram {
+    background-color: #3e749a;
+}
+
+footer .social .fa-youtube {
+    background-color: #fe0000;
+}
+
+footer .social .fa-pinterest {
+    background-color: #e60024;
+}
+
+footer .social .fa-linkedin-in {
+    background-color: #0077b4;
+}
+
+.footer_space{
+    height: 54px;
+}
+
+
+/* styling the products page */
+
+.product{
+    padding-top: 6rem;
+    padding-bottom: 1rem; 
+    background-color: rgba(207, 200, 200, 0.1);
+}
+
+.product .product_title{
+    font-size: 2.6rem;
+    margin-bottom: 1.6rem;
+    color: #3c4f79;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    padding: 10px 0;
+}
+
+.product .card{
+    margin-bottom: 1.3rem !important;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.card-img{
+    width: 80% !important;
+    height: 80% !important;
+    margin: 10% 10%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-body{
+    margin-left: 15px;
+}
+
+h2.card-title{
+    margin-bottom: 20px;
+}
+
+.card-text{
+    margin: 15px auto 15px 15px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.card-text .property{
+    display: inline-block;
+    width: 300px;
+    color: #797e81;
+}
+
+.product .card-body .btn{
+    margin-left: 25%;
+    margin-top: 20px;
+    width: 160px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* styling popup window */
+
+/* The Modal (background) */
+.mod {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* mod-content for logout popup */
+
+.mod-content-logout {
+    background-color: #e5ebeafd;
+    max-width: 600px;
+    margin: 15vh 32% 0 32%; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+}
+
+.mod-content-logout img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.mod-content-logout .content{
+    padding: 15px;
+    z-index: 1;
+}
+
+.mod-content-logout h3, .mod-content-logout h4{
+    margin-left: 40px;
+}
+
+.mod-content-logout .content .name{
+    margin-top: 10px;
+}
+
+.mod-content-logout #historybtn{
+    margin: 20px 5% 10px 5%;
+    width: 90%;
+    font-weight: 500;
+}
+.mod-content-logout #logoutbtn{
+    margin: 10px 5%;
+    width: 90%;
+    font-weight: 500;
+}
+
+.mod-content-logout #history_list li{
+    margin: 5px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(94, 62, 14);
+}
+
+/* mod-content for product enquiry popup */
+
+.mod-content {
+    background-color: #e5ebeafd;
+    width: 60vw;
+    margin: 10vh 20vw;
+    border: 1px solid #888;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mod .mod-content h2{
+    color: rgb(94, 9, 9);
+    font-weight: 600;
+    margin: auto;
+    max-width: 90%;
+    text-align: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.mod .mod-content img{
+    width: 90%;
+    height: 80%;
+    margin: 10% 5%;
+    margin-top: 15%;
+    margin-left: 15%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mod .mod-content form{
+    padding: 10px 15px;
+    margin-left: 20px;
+    width: 90%;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.mod .mod-content form label{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: steelblue;
+}
+
+.mod .mod-content form input, .mod .mod-content form select{
+    font-size: 1 rem !important;
+    font-weight: 500;
+    height: 2rem;
+    margin: 0px 10px;
+}
+
+.mod .mod-content form input#typeOfDelivery, .mod .mod-content form input#currentPrice{
+    height: 1rem;
+    width: 1rem !important;
+}
+
+.mod .mod-content .submit{
+    margin-top: 2px !important;
+}
+
+.mod .mod-content .customer-info{
+    padding: 10px 15px;
+    line-height: 0.8;
+    margin-left: 15px;
+}
+
+.mod .mod-content .customer-info h4{
+    font-weight: 500;
+    color: steelblue;
+    margin-bottom: 15px;
+}
+  
+/* The Close Button (x) */
+.mod .mod-content .cl, .mod .mod-content-logout .cl{
+    float: right;
+    color: #000;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-top: -0.6rem;
+    margin-right: 0.9rem;
+}
+  
+.mod .mod-content .cl:hover, .mod .mod-content-logout .cl:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation for mod */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* styling form */
+
+.form{
+    max-width: 490px;
+    margin: 150px auto 5px auto;
+}
+
+/* formS for signup form */
+
+.formS{
+    margin: 110px auto 5px auto;
+}
+
+.form .border{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.form h3{
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 5px 0 20px 0;
+    color: steelblue;
+}
+
+.form form{
+    width: 90%;
+    margin: auto;
+}
+
+.form form input{
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    margin: 10px 10px;
+    height: 40px;
+    padding-left: 55px;
+    height: 2.7rem;
+    border: none;
+    border: 1px solid rgb(151, 154, 156);
+    border-radius: 5px;
+}
+
+.form form>i{
+    color: gray;
+    font-size: 1.7rem;
+    position: absolute;
+    padding: 8px 25px; 
+    min-width: 40px; 
+}
+
+.eyeicon{
+    margin-left: 385px;
+    font-size: 1.3rem !important;
+    padding: 10px 20px !important; 
+}
+
+.eyeicon:active{
+    color: steelblue;
+}
+
+
+.form form input:focus{
+    border: none;
+    border: 2px solid steelblue;
+}
+
+.form form .btn{
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 10px 10px;
+}
+
+.form .quote p{
+    text-align: center;
+    padding: 10px 30px;
+    margin: auto;
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Styling contact us page */
+
+#contact_us{
+    padding-top: 80px;
+}
+
+#contact_us .title{
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 10px 0 30px 0;
+    color: steelblue;
+}
+
+#contact_us .row{
+    margin: 0 !important;
+}
+
+#contact_us .formC{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.03);
+    width: 90%;
+    margin: auto;
+}
+
+#contact_us .formC h4{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(115, 72, 128);
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+#contact_us .formC label{
+    display: block;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    width: 85%;
+    margin: 10px auto !important;
+    color: chocolate;
+}
+
+#contact_us .formC input, #contact_us .formC textarea{
+    font-size: 1.1rem !important;
+    display: block;
+    width: 85%;
+    margin: 2px auto !important;
+    padding: 2px 10px;
+    border: none;
+    border: 1px solid rgb(151, 154, 156);
+    border-radius: 5px;
+}
+
+#contact_us .formC input:focus, #contact_us .formC textarea:focus{
+    border: none;
+    border: 1px solid steelblue;
+}
+
+#contact_us .formC .btn{
+    display: block;
+    width: 85%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 20px auto !important;
+}
+
+#contact_us .text{
+    background: url("../images/contact_us/contact_us.jpg") no-repeat center center/cover; 
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+#contact_us .text i{
+    font-size: 2rem;
+    color: rgb(75, 68, 68);
+    padding-bottom: 10px;
+}
+
+#contact_us .text .heading{
+    color: rgb(196, 47, 72);
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+
+#contact_us .text .location{
+    font-size: 1.4rem;
+}
+
+#contact_us .textalign{
+    width: 85%;
+    margin: auto;
+    padding-top: 6vh;
+}
+
+#contact_us .para{
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* styling about us page */
+
+#about_us{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+#about_us .border{
+    border: 1px solid rgba(0,0,255,0.2) !important;
+    padding: 10px 40px;
+    background-color: rgba(210,210,210,0.06);
+}
+
+#about_us h2{
+	font-size: 2.7rem;
+    color: rgb(32, 100, 156);
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#about_us p{
+    font-size: 1.2rem;
+    color: rgb(44, 20, 4);
+}
+
+#about_us .card{
+    width: 95%;
+    margin: 40px auto;
+    background-color: rgba(0,0,0,0.004);
+}
+
+#about_us .card-body{
+    margin: 0px;
+    padding: 0px 20px;
+}
+
+#about_us .card-title{
+	font-size: 2.5rem;
+    color: steelblue;
+    text-align: center;
+    padding: 15px 0px;
+    margin: 0px;
+}
+
+#about_us .card-subtitle{
+	font-size: 1.8rem;
+    color: rgb(51, 100, 139);
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0, 0.2);
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+}
+
+#about_us .card-content{
+    background-color: rgba(0,0,255,0.01);
+    margin: 40px 10px;
+    padding: 0px 0px 10px 0px;
+}
+
+#about_us .property{
+    width: 200px;
+}
+
+#about_us .value{
+    margin-left: 25%;
+}
+
+#about_us .card-content:nth-of-type(1){
+    margin-top: 15px !important;
+}
+
+#about_us .subtitle{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: steelblue;
+    text-decoration: underline;
+}
+
+#about_us .list{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(77, 13, 42);
+}
+
+/* styling error page */
+
+#error{
+    width: 100%;
+    height: 100%;
+}
+
+/* ========================================== */
+/* responsive styling for mobile, tablet view */
+/* ========================================== */
+
+@media (max-width: 325px){
+    #logo{
+        width: 210px;
+    }
+    .form{
+        max-width: 300px !important;
+    }
+    .eyeicon{
+        margin-left: 220px !important;
+    }
+    #star-rating{
+        font-size: 2.2rem !important;
+    }
+    .mod-content-logout h3{
+        font-size: 1rem !important;
+        margin-left: 25px !important;
+    }
+    .mod-content-logout h4{
+        font-size: 0.8rem;
+        margin-left: 25px !important;
+    }
+    #feature .feature-info{
+        padding-top: 1rem !important;
+    }
+}
+
+@media (max-width: 420px){
+    #logo{
+        width: 260px;
+    }
+    footer .social-icon {
+        margin: 5px 3px !important;
+    }
+    .form{
+        max-width: 340px !important;
+    }
+    .eyeicon{
+        margin-left: 255px !important;
+    }
+    #comments .comment-container{
+        padding: 0px 0px 10px 0px !important;
+    }
+    #comments .content{
+        width: 100% !important;
+        padding: 8px !important;
+        margin: 2px 0px 2px 15px !important;
+    }
+    #comments .text{
+       margin-left: 15px !important;
+    }
+    #comments .comment-container .update{
+        margin-left: 5px !important;
+    }
+    #comments .content blockquote{
+        font-size: 0.8rem !important;
+    }
+    #comments .comment-container .add{
+        margin: 0px 0px 10px 0px !important;
+    }
+    #feature .feature-info{
+        padding-top: 2rem !important;
+    }
+    .product{
+        padding-top: 4.5rem !important;
+    } 
+    .product .product_title{
+        font-size: 2rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .product .card .col-md-4{
+        height: 280px;
+    }
+    .card-body{
+        margin-left: 0px !important;
+        padding: 5px 10px !important;
+    }  
+    .card-title{
+        font-size: 1.4rem !important;
+        text-align: center;
+    }  
+    .card-text{
+        margin: 5px !important;
+        font-size: 1rem !important;
+    }    
+    .card-text .property{
+        width: 150px !important;
+    }
+    .card-text .value{
+        display: inline !important;
+    }   
+    .product .card-body .btn{
+        margin-top: 10px !important;
+        font-size: 1rem !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        width: 130px !important;
+        margin-left: 30% !important;
+    }
+    .mod .mod-content .col-sm-4{
+        display: none;
+    }
+}
+
+@media (max-height: 450px){
+    .form{
+        margin: 110px auto 60px auto !important;
+    }
+    .formS{
+        margin: 110px auto 50px auto !important;
+    }
+    #contact_us{
+        padding-top: 40px;
+    }
+    #content h1{
+        margin-top: 5px !important;
+        margin-bottom: 1.2rem !important;
+    }
+    #content p{
+        margin-bottom: 20px !important;
+    }
+    #know_more .row .c{
+        width: 80% !important;
+        margin: 5px auto !important;
+    }
+}
+
+@media(max-width: 570px){
+    #content{
+        max-width: 300px;
+        padding-top: 40%;
+    }
+    #content h1{
+        font-size: 3.2rem;
+        font-weight: 500;
+    }
+    #content p{
+        font-size: 1rem;
+    }
+    .mod .mod-content .col-sm-4{
+        display: none;
+    }
+}
+
+@media(min-width: 566px) and (max-width: 830px){
+    #content{
+        max-width: 400px;
+        padding-top: 10%;
+    }
+    #content h1{
+        font-size: 3.2rem;
+        font-weight: 500;
+    }
+    #content p{
+        font-size: 1rem;
+    }
+    #feature .feature-info{
+        padding-top: 1rem !important;
+    }
+}
+
+@media (max-width: 992px){
+    nav .avatar{
+        width: 100%;
+        margin-top: 0.2rem !important;
+        margin-bottom: 0.2rem !important;
+        padding: 2px !important;
+        text-align: center;
+    }
+    .n-list{
+        margin-top: 0.5rem;
+        margin-right: 0;
+    }
+    nav .n-link{
+        width: 100%;
+        margin-top: 0.3rem !important;
+        margin-bottom: 0.3rem !important;
+        padding: 6px !important;
+        border-top: 1px solid gray;
+    }
+    nav .avatar, nav .register{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+    #know_more .p2, #know_more .p4, #know_more .p6{
+        order: 1;
+    }
+    #know_more .i2, #know_more .i4, #know_more .i6{
+        order: 2;
+    }
+    #contact_us .formC{
+        width: 100% !important;
+        margin: 20px auto !important;
+    }
+    #know_more .row .c{
+        height: 290px !important;
+    }
+    #know_more .row .i{
+        height: 220px !important;
+    }
+    #know_more .pic{
+        height: 95% !important;
+        width: 95% !important;
+    }
+    #know_more .info{
+        width: 95% !important;
+        height: 95% !important;
+        margin: auto !important;
+        padding: 15px 5px !important;
+    }
+    #know_more .info .product_list{
+        padding: 0 !important;
+    }
+    #know_more .info .product_list li{
+        margin: 5px;
+        padding: 5px 10px !important;
+        font-weight: 500;
+        text-align: left;
+    }
+    #know_more .info .product_list li a{
+        font-size: 1rem !important;
+    }
+    #about_us .border{
+        padding: 5px 15px !important;
+    }
+    #know_more .head-info h2{
+        font-size: 3.2rem !important;
+        padding: 1rem 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    #comments .head-info h2{
+        font-size: 3.2rem !important;
+    }
+    .formS{
+        margin: 110px auto 50px auto !important;
+    }
+    #about_us h2{
+        font-size: 2rem !important;
+        padding: 5px 0px !important;
+    }
+    #about_us p{
+        font-size: 1rem !important;
+    }
+    #about_us .card{
+        width: 100% !important;
+        margin: 20px auto !important;
+    }
+    #about_us .card-body{
+        padding: 0px 5px !important;
+    }
+    #about_us .card-title{
+        font-size: 1.8rem !important;
+        padding: 10px 0px !important;
+    }
+    #about_us .card-subtitle{
+        font-size: 1.3rem !important;
+        padding: 5px !important;
+    }
+    #about_us .card-content{
+        margin: 20px 5px !important;
+        padding: 0px 0px 5px 0px !important;
+    }
+    #about_us .value{
+        display: block !important;
+        margin-left: 0% !important;
+    }
+    #about_us .subtitle{
+        font-size: 1.4rem !important;
+    }
+    #about_us .list{
+        font-size: 1rem !important;
+        padding-left: 30px !important;
+    }
+    .card-text .property{
+        width: 200px !important;
+    }
+    .mod-content {
+        width: 90% !important;
+        margin: 8vh auto 0 auto !important;
+    }
+    .mod .mod-content h2{      
+        font-size: 1.3rem !important;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(0,0,0, 0.1);
+    }
+    .mod .mod-content form{
+        padding: 10px !important;
+        margin: 5px !important;
+        width: 95% !important;
+    }
+    .mod .mod-content form label{
+        font-size: 1.1rem !important;
+    }
+    .mod .mod-content form input{
+        height: 1.8rem !important;
+        margin: 0px 5px !important;
+        width: 130px;
+    }
+    .mod .mod-content form select{
+        height: 1.8rem !important;
+        margin: 0px 5px !important;
+    }
+    .mod .mod-content form input#typeOfDelivery, .mod .mod-content form input#currentPrice{
+        height: 0.8rem !important;
+    }
+    .mod .mod-content p{
+        margin-bottom: 5px !important;
+    }
+    .mod .mod-content .customer-info{
+        font-size: 0.9rem !important;
+        line-height: 1.2 !important;
+    }
+    .mod .mod-content .customer-info h4{
+        font-size: 1.2rem !important;
+        margin-bottom: 5px !important;
+    }
+    .mod .mod-content .cl, .mod .mod-content-logout .cl{
+        font-size: 1.7rem !important;
+        margin-right: 0.4rem !important;
+    }
+}
+
+@media (max-width: 1024px){
+    .mod-content-logout{
+        margin: 15vh auto 0 auto !important;
+        width: 90%;
+    }
+    .mod-content-logout img{
+        width: 60px !important;
+    }
+    .mod-content-logout h3{
+        font-size: 1.2rem;
+        margin-left: 20px !important;
+    }
+    .mod-content-logout h4{
+        font-size: 1rem;
+        margin-left: 20px !important;
+    }
+    .mod-content-logout .name{
+        margin-top: 5px !important;
+    }
+    .mod-content-logout #historybtn{
+        margin: 15px 5% 5px 5% !important;
+        font-size: 1.1rem !important;
+        height: 40px;
+    }
+    .mod-content-logout #logoutbtn{
+        margin: 5px 5% !important;
+        font-size: 1.1rem !important;
+        height: 40px;
+    }
+    .mod-content-logout #history_list li{
+        margin: 5px 0px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media(width: 1024px){
+    .mod .mod-content{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
+}
+

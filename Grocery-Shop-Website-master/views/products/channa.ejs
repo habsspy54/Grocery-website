@@ -1,0 +1,75 @@
+<% include ../partials/header %>
+
+<section class="product">
+    <div class="container">
+        <h2 class="product_title">DESI CHANNA</h2>
+        <% channaProducts.forEach(function(product){ %>
+            <div id="<%= product.id %>" class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="<%= product.image %>" class="card-img" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title"><%= product.title %></h2>
+                            <p class="card-text"><span class="property">Packaging Size</span><span class="value"><%= product.pSize %></span></p> 
+                            <p class="card-text"><span class="property">Variety</span><span class="value"><%= product.variety %></span></p>
+                            <p class="card-text"><span class="property">Shelf Life</span><span class="value"><%= product.shelfLife %></span></p>
+                            <p class="card-text"><span class="property">Is It Organic</span><span class="value"><%= product.organic %></span></p>
+                            <p class="card-text"><span class="property">Packaging Type</span><span class="value"><%= product.pType %></span></p>       
+                            <p class="card-text"><span class="property">Price Range</span><span class="value"><%= product.price %></span></p>   
+                            <button onclick="document.getElementById('<%= product.idn %>').style.display='block'" class="btn btn-secondary">Interested ?</button>
+                            <div id="<%= product.idn %>" class="mod">
+                                <div class="animate mod-content">
+                                    <span onclick="document.getElementById('<%= product.idn %>').style.display='none'" class="cl">&times;</span>
+                                    <h2>Contact Us For <%= product.title %></h3>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img src="<%= product.image %>" alt="Image">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <form action="/products/channa" method="POST">
+                                                <p>
+                                                    <input class="d-none" type="text" name="title" value="<%= product.title %>">
+                                                    <label for="qty">Select Required Quantity:</label>
+                                                    <input type="number" name="quantity" id="qty" placeholder="10" required>
+                                                    <select name="unit" id="qty">
+                                                        <option value="Units">Units</option>
+                                                        <option value="Kilogram">Kilogram</option>
+                                                        <option value="Quintal">Quintal</option>
+                                                        <option value="Ton">Ton</option>
+                                                        <option value="Bags">Bags</option>
+                                                        <option value="Packets">Packets</option>
+                                                    </select>
+                                                </p>
+                                                <p>
+                                                    <label for="typeOfDelivery">Select Your Preference:</label>
+                                                    <input type="radio" name="typeOfDelivery" value="Home Delivery" id="typeOfDelivery" required>Home Delivery
+                                                    <input type="radio" name="typeOfDelivery" value="Shop Visit" id="typeOfDelivery" checked required>Shop Visit
+                                                </p>
+                                                <p>
+                                                    <label for="currentPrice">Want To Know Current Price:</label>
+                                                    <input type="radio" name="currentPrice" value="Yes" id="currentPrice" checked required>Yes
+                                                    <input type="radio" name="currentPrice" value="No" id="currentPrice" required>No
+                                                </p>
+                                                <button class="submit btn btn-sm btn-outline-success" type="submit">Submit</button>                                                
+                                            </form>
+                                            <div class="customer-info">
+                                                <h4>Your Contact Info :</h4>
+                                                <p>Name : <%= currentUser.fname + " " + currentUser.lname %></p>
+                                                <p>Contact No : <%= currentUser.contact %></p>
+                                                <p>Email Id : <%= currentUser.email %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }); %>  
+    </div>
+</section>
+
+<% include ../partials/footer %>

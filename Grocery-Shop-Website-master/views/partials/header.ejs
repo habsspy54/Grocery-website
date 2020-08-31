@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link id="icon" rel="icon" href="../images/icon.ico">
+    <title>SADGURU RICE TRADERS | Rice, Sugar, Jaggery, Pulses Wholesalers in Vashi, Navi Mumbai</title>
+    <meta name="description" content="We are the best quality Rice, Sugar, Jaggery, Pulses Wholesalers in Vashi, Navi Mumbai, Maharashtra, India. Established in the year 2007 at Navi Mumbai, Maharashtra, We “Sadguru Rice Trader” are a Sole Proprietorship based firm, engaged as the foremost Wholesale Trader of Organic Rice,Sugar,Jaggery etc. Our products are high in demand due to their premium quality and affordable prices. Furthermore, we ensure to timely deliver these products to our clients, through this, we have gained a huge clients base in the market. Sadguru Rice Traders has made a name for itself in the list of top suppliers of in India. The supplier company is located in Navi Mumbai, Maharashtra and is one of the leading sellers of listed products.Sadguru Rice Traders is listed in Trade India's list of verified sellers offering supreme quality of etc. Buy in bulk from us for the best quality products and service.">
+    <link rel="canonical" href="https://sadguru-rice-traders.herokuapp.com/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="../stylesheets/app.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheets/lib/bootstrap.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto,Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="/"><img id="logo" src="../images/logo.png" alt="SADGURU RICE TRADERS LOGO"> </a>
+        <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="n-list navbar-nav ml-auto">
+            <li class="home n-item">
+              <a class="n-link" href="/"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="aboutus n-item">
+                <a class="n-link" href="/about_us"><i class="fas fa-address-card"></i> About Us</a>
+            </li>
+            <li class="contactus n-item">
+              <a class="n-link" href="/contact_us"><i class="fas fa-phone-alt"></i> Contact Us</a>
+            </li>
+            <% if(!currentUser){ %>
+              <li class="login n-item">
+                <a class="n-link" href="/login"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+              </li>
+              <li class="signup n-item">
+                <a class="n-link register" href="/signup"><i class="fas fa-user-alt"></i> Sign Up</a>
+              </li> 
+            <% }else{ %>
+              <li class="n-item">
+                <div class="avatar" onclick="document.getElementById('logoutmod').style.display='block'">
+                    <img src="../images/Avatar/male_avatar.png" alt="Icon"> 
+                    <%=currentUser.fname%>
+                </div>
+              </li> 
+            <% } %>         
+          </ul>
+        </div>
+    </nav>
+
+    <% if(currentUser){ %>
+    <div id="logoutmod" class="mod">
+      <div class="animate mod-content-logout">
+        <span onclick="document.getElementById('logoutmod').style.display='none'" class="cl">&times;</span>
+        <div class="content">
+          <div class="row">
+            <div class="col-2">
+              <img src="../images/Avatar/male_avatar.png" alt="Icon">
+            </div>
+            <div class="col-10 name">
+              <h3><%=currentUser.fname + " " + currentUser.lname%></h3> 
+              <h4><%=currentUser.email%></h4>
+            </div>
+          </div>
+          <button id="historybtn" class="btn btn-info btn-lg" onclick="document.getElementById('history_list').classList.toggle('d-none')">History</button> 
+          <ol id="history_list" class="d-none">
+            <% if(currentUser.history.length===0){ %>
+              <li type="disc">No History Available</li>
+            <% } %>
+            <% for(var i=0; i<currentUser.history.length; i++) { %>
+              <li><%= currentUser.history[i].product + "    -    " + currentUser.history[i].quantity + "    -    " + currentUser.history[i].date.toDateString() %></li>
+            <% } %>
+          </ol> 
+          <a id="logoutbtn" class="btn btn-info btn-lg" href="/logout">Log Out</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+
+    <div class="container">
+      <% if(error && error.length>0){ %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <%= error %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+      <% }; %>
+      <% if(success && success.length>0){ %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= success %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+      <% }; %>    
+    </div>
+    

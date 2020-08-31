@@ -1,0 +1,53 @@
+<% include ./partials/header %>
+
+<section id="contact_us">
+	<h2 class="title">CONTACT INFO</h2>
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="text">
+				<div class="textalign">
+					<i class="fa fa-map-marker-alt"><span class="heading"> Address </span></i>
+					<p class="para"><em>Sadguru Rice Traders, Plot No-k/23, market II, phase II, Dana bunder, vashi, Navi Mumbai, Maharashtra, 400705, India</em></p>
+					<i class="fa fa-phone"><span class="heading"> Lets Talk</span></i>
+					<p class="para"><em>022 – 40131721, 8898041429, 9920018111</em></p>
+					<i class="fa fa-envelope"><span class="heading">	General Support</span></i>
+					<p class="para"><em>deemahek10@gmail.com</em></p>
+					<h4 class="heading">You Can Find Us Here:</h4>
+					<i class="para location fa fa-map-marker-alt"><a href="https://maps.google.com/?q=19.0825655,73.0086558">  Get directions</a></i>
+				</div>
+			</div>
+	    </div>
+	    <div class="col-lg-6">
+			<div class="formC">
+				<h4>Send Us a Message</h4>
+				<% if(currentUser){ %>
+				<form action="/contact_us" method="POST">
+					<label for="name">TELL US YOUR NAME*</label>
+					<input id="name" type="text" placeholder="First Name                     Last Name" name="name" value="<%= currentUser.fname + ' ' + currentUser.lname %>" required>
+					<label for="email">ENTER YOUR EMAIL*</label>
+					<input id="email" type="email" placeholder="Eg: example@gmail.com" name="email" value="<%= currentUser.email %>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter valid email address" required>
+					<label for="contact">ENTER CONTACT NUMBER*</label>
+					<input id="contact" type="text" placeholder="Enter A Valid 10 Digit Contact No" name="contact" value="<%= currentUser.contact %>" pattern="[7-9]{1}[0-9]{9}" title="Please enter valid 10 digit contact number" required>
+					<label for="msg">ENTER YOUR MESSAGE HERE*</label>
+					<textarea id="msg" cols="60" rows="4" name="message" required></textarea>
+					<button type="submit" class="btn btn-success">Send Message</button>
+				</form>
+				<% }else{ %>
+				<form action="/contact_us" method="POST">
+					<label for="name">TELL US YOUR NAME*</label>
+					<input id="name" type="text" placeholder="First Name                   Last Name" name="name" required>
+					<label for="email">ENTER YOUR EMAIL*</label>
+					<input id="email" type="email" placeholder="Eg: example@gmail.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter valid email address" required>
+					<label for="contact">ENTER CONTACT NUMBER*</label>
+					<input id="contact" type="text" placeholder="Enter A Valid 10 Digit Contact No" name="contact" pattern="[7-9]{1}[0-9]{9}" title="Please enter valid 10 digit contact number" required>
+					<label for="msg">ENTER YOUR MESSAGE HERE*</label>
+					<textarea id="msg" cols="60" rows="4" name="message" required></textarea>
+					<button type="submit" class="btn btn-success">Send Message</button>
+				</form>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<% include ./partials/footer %>

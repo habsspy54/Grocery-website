@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+
+<div class="form">
+    <div class="border">
+        <h3>Add Review</h3>
+        <form action="/comments" method="POST">
+            <div id="star-rating">
+                <i class="fa fa-star one"></i>
+                <i class="fa fa-star two"></i>
+                <i class="fa fa-star three"></i>
+                <i class="fa fa-star four"></i>
+                <i class="fa fa-star five"></i>
+                <input class="d-none" type="number" name="starValue">
+            </div>
+            <i class="fas fa-pencil-alt"></i> 
+            <input type="text" name="text" placeholder="Review" required>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>
+

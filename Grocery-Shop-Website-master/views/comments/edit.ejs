@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+<div class="form">
+    <div class="border">
+        <h3>Update Review</h3>
+        <form action="/comments/<%= comment._id %>?_method=PUT" method="POST">
+            <div id="star-rating">
+                <i class="fa fa-star one"></i>
+                <i class="fa fa-star two"></i>
+                <i class="fa fa-star three"></i>
+                <i class="fa fa-star four"></i>
+                <i class="fa fa-star five"></i>
+                <input class="d-none" type="number" name="starValue" value="<%= comment.starValue %>">
+            </div>
+            <i class="fas fa-pencil-alt"></i> 
+            <input type="text" name="text" placeholder="Review" value="<%= comment.text %>" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>
+
